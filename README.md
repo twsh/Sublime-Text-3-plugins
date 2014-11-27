@@ -17,3 +17,7 @@ I put a YAML metadata header in my files. This plugin replaces the date field wi
 # updatewords.py
 
 This plugin counts the words in the document (excluding YAML metadata) and replaces the current `words:` metadata field with the count. LaTeX is ignored, and references won't be counted.
+
+# examplereference.py
+
+This plugin looks for numbered examples as defined by Pandoc and creates a serachable drop-down menu. Selecting an example inserts that examples label at the cursor.
