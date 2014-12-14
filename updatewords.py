@@ -1,4 +1,4 @@
-# Do a wordcount using wc and insert the result into the metadata
+# Do a wordcount and insert the result into the metadata
 
 import re
 import sublime
@@ -16,9 +16,10 @@ class UpdateWordsCommand(sublime_plugin.TextCommand):
             text,
             count=1
         )
+        # Find the number of words, but don't count LaTeX commands or Pandoc cite keys
         words = str(
             len(
-                [x for x in no_metadata.split() if not x.startswith('\\')]
+                [x for x in no_metadata.split() if not (x.startswith('\\') or re.search('@[A-Za-z]+\\d{4}[A-Za-z]*', x))]
             )
         )
         region = self.view.find('words:.+', 0)
