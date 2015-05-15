@@ -3,10 +3,6 @@
 import sublime
 import sublime_plugin
 import re
-import sys
-
-# Needed to find my functions
-sys.path.append('/usr/local/lib/python3.4/site-packages')
 
 
 def get_examples(text):

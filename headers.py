@@ -5,10 +5,7 @@
 import re
 import sublime
 import sublime_plugin
-import sys
 
-# Needed to find my functions
-sys.path.append('/usr/local/lib/python3.4/site-packages')
 
 octothorpe_to_depth =\
     {
