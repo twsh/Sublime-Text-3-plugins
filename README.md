@@ -13,3 +13,7 @@ I put a YAML metadata header in my files. This plugin replaces the date field wi
 # examplereference.py
 
 This plugin looks for numbered examples as defined by Pandoc and creates a serachable drop-down menu. Selecting an example inserts that examples label at the cursor.
+
+# updatesections.py
+
+This script looks at section references and tries to find the section referred to. The number of that section in the reference is then updated.
