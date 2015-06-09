@@ -14,6 +14,6 @@ I put a YAML metadata header in my files. This plugin replaces the date field wi
 
 This plugin looks for numbered examples as defined by Pandoc and creates a serachable drop-down menu. Selecting an example inserts that examples label at the cursor.
 
-# updatesections.py
+# updatewords.py
 
-This script looks at section references and tries to find the section referred to. The number of that section in the reference is then updated.
+The script looks for a words field in a YAML metadata block and replaces it with the current word count. A helper bash script `pandocwc.sh` is used which removes YAML and other Pandoc things before counting with `wc`.
