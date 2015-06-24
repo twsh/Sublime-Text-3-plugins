@@ -16,4 +16,4 @@ This plugin looks for numbered examples as defined by Pandoc and creates a serac
 
 # updatewords.py
 
-The script looks for a words field in a YAML metadata block and replaces it with the current word count. A helper bash script `pandocwc.sh` is used which removes YAML and other Pandoc things before counting with `wc`.
+The script looks for a words field in a YAML metadata block and replaces it with the current word count. A helper bash script `pandocwc.sh` is used which removes YAML and other Pandoc things before counting with `wc`. The path to this helper script is set in the main script.
