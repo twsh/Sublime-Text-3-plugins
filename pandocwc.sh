@@ -1,5 +1,6 @@
 #!/bin/sh
 
-# Assumptons: There is only one YAML block and it's at the start
+# This won't count words in references
+# Add a `--bibliography` option if you want that
 
-tr '\n' ' ' < "$1" | perl -pe 's/---.+?\.\.\.//' | perl -pe 's/{[>>|\-\-].+?[<<|\-\-]}//g' | perl -pe 's/{\+\+(.+?)\+\+}/\1/g' | perl -pe 's/\[@.+?\][[:punct:]]?|@\w+\s?(\[.+?\])?[[:punct:]]?//g' | perl -pe 's/\[.+?\]\(#.+?\)//' | wc -w
+pandoc --to plain "$1" | wc -w
